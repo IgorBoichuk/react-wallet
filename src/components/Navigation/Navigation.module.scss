@@ -1,0 +1,51 @@
+@import '../../scss/variables';
+
+svg {
+  display: block;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  padding-top: 5px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLinkCurrency {
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.navIcon {
+  display: block;
+  border-radius: 6px;
+  fill: #6E78E8;
+  
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.navText {
+  @media screen and (max-width: 767.8px) {
+    display: none;
+  }
+
+  font-family: 'Poppins';
+  font-size: 18px;
+
+  color: $color-text;
+}

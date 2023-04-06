@@ -1,0 +1,196 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+// Tables
+.transactionsTableWrapper {
+  width: 100%;
+  margin-top: 60px;
+  margin-right: -12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 400px;
+
+  @media (max-width: $breakpoint-desktop - 1) {
+    margin-top: 80px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: rgba($color: $white, $alpha: 0.7);
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $colorBlue;
+    border-radius: 10px;
+  }
+}
+.isLoading {
+  opacity: 0.5;
+}
+
+.transactionsTable {
+  border: none;
+  border-collapse: collapse;
+  vertical-align: middle;
+  width: 100%;
+  min-width: 704px;
+
+  .thead {
+    text-align: left;
+    background: $white;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: space-between;
+    min-width: 714px;
+    width: 100%;
+    border-radius: 30px;
+    justify-content: space-between;
+    @media (max-width: $breakpoint-desktop - 1) {
+      top: 24px;
+    }
+  }
+
+  .tr {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .th:nth-child(1),
+  .td:nth-child(1) {
+    width: 90px;
+  }
+
+  .th:nth-child(2),
+  .td:nth-child(2) {
+    width: 100px;
+  }
+
+  .th:nth-child(3),
+  .td:nth-child(3) {
+    width: 120px;
+    text-align: left;
+  }
+
+  .th:nth-child(4),
+  .td:nth-child(4) {
+    width: 140px;
+    text-align: left;
+  }
+
+  .th:nth-child(5),
+  .td:nth-child(5) {
+    width: 125px;
+  }
+
+  .th:nth-child(6),
+  .td:nth-child(6) {
+    width: 130px;
+  }
+
+  .th {
+    padding: 16px 14px;
+    text-align: center;
+  }
+
+  .td {
+    padding: 14px;
+    text-align: center;
+  }
+
+  .tbody {
+    .tr:not(:last-child) {
+      border-bottom: 1px solid $colorBorder;
+      box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.tableButton {
+  max-width: 67px;
+  letter-spacing: 0;
+}
+
+// Mobile transactions list
+
+ul {
+  list-style: none;
+
+  padding: 0;
+}
+
+.mobileTransactionsList {
+  min-width: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mobileTransactionsItem {
+  margin-bottom: 8px;
+}
+
+.mobileTransaction {
+  position: relative;
+  &:before {
+    content: '';
+    width: 5px;
+    height: 100%;
+    background: $colorPink;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &.income:before {
+    background-color: $mainColor;
+  }
+  &.expense:before {
+    background-color: $colorPink;
+  }
+
+  li {
+    position: relative;
+    background-color: $white;
+    min-height: 47px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+
+    &:last-child {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    &:first-child {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    &:not(:last-child) {
+      &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: $colorBorder;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .mobileTransList__title {
+      font-weight: 700;
+    }
+
+    .editButtonTitle {
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@import-normalize; /* bring in normalize.css styles */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
