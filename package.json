@@ -2,7 +2,7 @@
   "name": "react-wallet",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Karambitos.github.io/react-wallet",
+  "homepage": "https://IgorBoichuk.github.io/react-wallet",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",

@@ -6,9 +6,9 @@ import { createRef, useState } from 'react';
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { getIsLoading } from 'redux/auth/authSelectors';
-import Loader from 'components/Loader/Loader';
+// import { useSelector } from 'react-redux';
+// import { getIsLoading } from 'redux/auth/authSelectors';
+// import Loader from 'components/Loader/Loader';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 
 export const LoginForm = ({ cbOnSubmit }) => {
